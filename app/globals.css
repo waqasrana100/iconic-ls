@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --luxury-gold: #d4af37;
+  --luxury-gray-900: #1a1a1a;
+  --luxury-gray-800: #2a2a2a;
+  --luxury-gray-700: #3a3a3a;
+  --luxury-gray-400: #9a9a9a;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--luxury-gray-900);
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-lift:hover {
+  @apply transform -translate-y-2 shadow-lg;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--luxury-gray-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--luxury-gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b3941f;
+}
+
+/* Form styles */
+input,
+select,
+textarea {
+  @apply bg-luxury-gray-800 border-luxury-gray-700 text-white placeholder-luxury-gray-400 focus:ring-luxury-gold focus:border-luxury-gold;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-luxury-gold text-black hover:bg-luxury-gold/90 transition-all duration-300;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive typography */
+@screen sm {
+  html {
+    font-size: 14px;
+  }
+}
+
+@screen md {
+  html {
+    font-size: 16px;
+  }
+}
+
+@screen lg {
+  html {
+    font-size: 18px;
+  }
+}
